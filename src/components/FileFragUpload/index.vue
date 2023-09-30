@@ -30,6 +30,7 @@ const befUpload = () => {
   inp.value.click()
 }
 const upload = async (e: HTMLInputElement) => {
+  state.currentStage = 'b'
   const file: File = e.target.files[0]
   state.chunkTotal = Math.ceil(file.size / CHUNK_SIZE)
   const chunks = createChunks(file);
@@ -37,7 +38,6 @@ const upload = async (e: HTMLInputElement) => {
   inp.value.value = ''
 
   // 上传前检查
-  state.currentStage = 'b'
   const res1 = await fileChunkUploadCheck({
     fileName: file.name,
     fileMd5: state.fileMd5,
@@ -84,10 +84,12 @@ const hash = (chunks: Blob[]): Promise<string> => {
     const spark = new SparkMd5();
     const _read = (i: number) => {
       if (i >= chunks.length) {
+        state.chunkNum = 0
         resolve(spark.end())
         return
       }
       const blob = chunks[i];
+      state.chunkNum = i + 1
       state.fileSize += blob.size
       const reader = new FileReader();
       reader.onload = e => {
@@ -142,8 +144,8 @@ const uploadSuccess = () => {
 
 <template>
   <div class="el">
-    <el-button :disabled="isDisabled" type="primary" :icon="Upload" @click="befUpload">上传文件
-    </el-button>
+    <el-button :disabled="isDisabled" type="primary" :icon="Upload" @click="befUpload">上传文件</el-button>
+    <span v-if="isDisabled">{{ `${state.dictStage[state.currentStage]}` }}</span>
     <el-progress
         style="width: 300px;"
         v-if="isDisabled" :percentage="Number(((state.chunkNum/state.chunkTotal)*100).toFixed(2))"
@@ -151,13 +153,6 @@ const uploadSuccess = () => {
         striped
         striped-flow
     />
-    <!--<p>-->
-    <!--  <span>{{ `${state.dictStage[state.currentStage]}` }}</span>-->
-    <!--  <span-->
-    <!--      v-if="state.currentStage==='c'">{{-->
-    <!--      `，共${state.chunkTotal}个分片，当前已进行到第${state.chunkNum}个分片。`-->
-    <!--    }}</span>-->
-    <!--</p>-->
     <input ref="inp" type="file" v-show="false" @change="upload"/>
   </div>
 </template>
