@@ -1,0 +1,31 @@
+{
+  "name": "demo-v",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --mode dev",
+    "dev:test": "vite --mode test",
+    "build:test": "vite build --mode test",
+    "build:prod": "vite build --mode prod",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "axios": "^1.5.1",
+    "element-plus": "^2.3.14",
+    "pinia": "^2.1.6",
+    "sass": "^1.68.0",
+    "spark-md5": "^3.0.2",
+    "vue": "^3.2.47",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "typescript": "^5.0.2",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-components": "^0.25.2",
+    "vite": "^4.3.2",
+    "vue-tsc": "^1.4.2"
+  }
+}
