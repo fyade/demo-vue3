@@ -1,9 +1,11 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
-  Home
+ImageCrop
 </template>
 
 <style scoped lang="scss">
+
 </style>

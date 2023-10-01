@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export function downloadFullFile(url, name, downloadProgress) {
+export function downloadFullFile(url: string, name: string, downloadProgress: Function): void {
   axios({
     url,
     method: 'GET',

@@ -5,7 +5,7 @@ import { onMounted, reactive, ref } from "vue";
 import { selFileChunkUploadList } from "@/api/common.ts";
 import { downloadFullFile } from "@/utils/file.ts";
 import { getFileBaseUrl } from "@/utils/env.ts";
-import { getSize } from "../../utils/file-util.ts";
+import { getSize } from "@/utils/file-util.ts";
 import { FormInstance } from "element-plus";
 
 const state = reactive({

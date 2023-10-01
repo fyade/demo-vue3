@@ -3,8 +3,12 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    component: () => import('@/views/Home/index.vue'),
+    component: () => import('@/layout/index.vue'),
     children: [
+      {
+        path: '',
+        component: () => import('@/views/Home/index.vue')
+      },
       {
         path: 'file-full',
         component: () => import('@/views/FileFull/index.vue')
@@ -12,6 +16,10 @@ const routes = [
       {
         path: 'file-frag',
         component: () => import('@/views/FileFrag/index.vue')
+      },
+      {
+        path: 'image-crop',
+        component: () => import('@/views/ImageCrop/index.vue')
       }
     ]
   }

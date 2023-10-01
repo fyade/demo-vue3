@@ -15,3 +15,9 @@ export const publicDict = {
   createTime: 'createTime',
   updateTime: 'updateTime'
 }
+
+export const rubbishParams = (...params: any[]): void => {
+  params.forEach(item => {
+    `${item} is a useless parameter in this function, and if I don't use it, typescript will add red squiggly lines underneath it to annoy me.`
+  })
+}
