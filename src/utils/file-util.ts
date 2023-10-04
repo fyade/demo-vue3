@@ -1,18 +1,7 @@
-// export function blobToUnit8Array(blob: Blob): Promise<any> {
-//   return new Promise((resolve, reject) => {
-//     const reader = new FileReader();
-//     reader.onload = () => {
-//       const arrayBuffer = reader.result;
-//       const unit8Array = new Uint8Array(arrayBuffer);
-//       resolve(unit8Array)
-//     }
-//     reader.onerror = (error) => {
-//       reject(error)
-//     }
-//     reader.readAsArrayBuffer(blob)
-//   })
-// }
-
+/**
+ * 数值转带单位的大小
+ * @param size
+ */
 export const getSize = (size: string | number): string => {
   const unit = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
   let s = Number(size)
@@ -22,4 +11,14 @@ export const getSize = (size: string | number): string => {
     index++
   }
   return `${Number(s.toFixed(2))}${unit[index]}`
+}
+
+/**
+ * blob转文件
+ * @param blob
+ * @param fileName
+ * @param type
+ */
+export const blobToFile = (blob: Blob, fileName: string, type: any): File => {
+  return new File([blob], fileName, {type})
 }

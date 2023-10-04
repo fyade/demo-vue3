@@ -1,9 +1,9 @@
 <script setup lang="ts">
-
+import ImageCrop from '@/components/ImageCrop/index.vue'
 </script>
 
 <template>
-ImageCrop
+  <ImageCrop/>
 </template>
 
 <style scoped lang="scss">

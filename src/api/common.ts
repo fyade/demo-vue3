@@ -22,7 +22,7 @@ export function selFileFullUploadList(data: queryParamsOfSelFileFullUploadList) 
  * 文件完整上传
  * @param file
  */
-export function fileFullUpload(file: File) {
+export function fileFullUpload(file: FormData) {
   return request({
     url: '/common/upload/file/full',
     method: 'POST',

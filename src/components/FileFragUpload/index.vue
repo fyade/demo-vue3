@@ -6,7 +6,7 @@ import { CHUNK_SIZE } from "@/utils/base.ts";
 import SparkMd5 from 'spark-md5'
 import { typeOf } from "@/utils/object-util.ts";
 
-const emit = defineEmits(['refresh']);
+const emit = defineEmits(['uploadSuccess']);
 const state = reactive({
   currentStage: 'a',
   dictStage: {
@@ -138,7 +138,7 @@ const startUpload = (index: number, chunks: Blob[]): Promise<null> => {
 const uploadSuccess = () => {
   state.currentStage = 'd'
   state.chunkNum = 0
-  emit('refresh')
+  emit('uploadSuccess')
 }
 </script>
 

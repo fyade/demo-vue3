@@ -99,7 +99,7 @@ const onReset = () => {
 </script>
 
 <template>
-  <FileFragUpload @refresh="getInfo"/>
+  <FileFragUpload @upload-success="getInfo"/>
   <br/>
 
   <el-dialog v-model="state.dialogVisible" draggable :close-on-click-modal="false" :close-on-press-escape="false"

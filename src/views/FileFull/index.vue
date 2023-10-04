@@ -68,7 +68,7 @@ const downloadFile = row => {
 </script>
 
 <template>
-  <FileFullUpload @refresh="getInfo"/>
+  <FileFullUpload @upload-success="getInfo"/>
 
   <el-table
       style="width: 100%"

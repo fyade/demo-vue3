@@ -7,7 +7,11 @@ interface orderByDtoT {
 }
 
 export interface queryParamsOfSelFileFullUploadList extends pageParamsT {
-  orderByDto: orderByDtoT[]
+  fileName?: string,
+  fileMd5?: string,
+  remark?: string,
+  ignoreSame?: boolean,
+  orderByDto?: orderByDtoT[]
 }
 
 export interface queryParamsOfSelFileChunkUploadList extends pageParamsT {
