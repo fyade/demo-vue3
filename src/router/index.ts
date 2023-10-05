@@ -20,6 +20,10 @@ const routes = [
       {
         path: 'image-crop',
         component: () => import('@/views/ImageCrop/index.vue')
+      },
+      {
+        path: 'waterfall-flow',
+        component: () => import('@/views/WaterfallFlow/index.vue')
       }
     ]
   }

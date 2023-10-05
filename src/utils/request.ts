@@ -25,6 +25,7 @@ request.interceptors.response.use(
         if (res.code >= 200 && res.code < 300) {
           if (res.total) {
             res.total = Number(res.total)
+            res.pages = Number(res.pages)
           }
           return res
         } else if (res.code === 401) {
