@@ -12,7 +12,7 @@ import {
  */
 export function selFileFullUploadList(data: queryParamsOfSelFileFullUploadList) {
   return request({
-    url: '/common/upload/file/full/list',
+    url: '/file/full/list',
     method: 'POST',
     data
   })
@@ -24,7 +24,7 @@ export function selFileFullUploadList(data: queryParamsOfSelFileFullUploadList) 
  */
 export function fileFullUpload(file: FormData) {
   return request({
-    url: '/common/upload/file/full',
+    url: '/file/full/upload',
     method: 'POST',
     data: file
   })
@@ -36,7 +36,7 @@ export function fileFullUpload(file: FormData) {
  */
 export function selFileChunkUploadList(data: queryParamsOfSelFileChunkUploadList) {
   return request({
-    url: '/common/upload/file/chunk/list',
+    url: '/file/chunk/list',
     method: 'POST',
     data
   })
@@ -48,7 +48,7 @@ export function selFileChunkUploadList(data: queryParamsOfSelFileChunkUploadList
  */
 export function fileChunkUploadCheck(data: queryParamsOfFileChunkUploadCheck) {
   return request({
-    url: '/common/upload/file/chunk/check',
+    url: '/file/chunk/check',
     method: 'POST',
     data
   })
@@ -60,7 +60,7 @@ export function fileChunkUploadCheck(data: queryParamsOfFileChunkUploadCheck) {
  */
 export function fileChunkUpload({fileMd5, orderNum, file}: { fileMd5: string, orderNum: number, file: Blob }) {
   return request({
-    url: `/common/upload/file/chunk/${fileMd5}/${orderNum}`,
+    url: `/file/chunk/upload/${fileMd5}/${orderNum}`,
     method: 'POST',
     data: file
   })
@@ -72,7 +72,7 @@ export function fileChunkUpload({fileMd5, orderNum, file}: { fileMd5: string, or
  */
 export function fileChunkMerge(data: queryParamsOfFileChunkMerge) {
   return request({
-    url: '/common/upload/file/chunk/merge',
+    url: '/file/chunk/merge',
     method: 'POST',
     data
   })

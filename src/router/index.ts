@@ -11,11 +11,11 @@ const routes = [
       },
       {
         path: 'file-full',
-        component: () => import('@/views/FileFull/index.vue')
+        component: () => import('@/views/FileFullUpload/index.vue')
       },
       {
         path: 'file-frag',
-        component: () => import('@/views/FileFrag/index.vue')
+        component: () => import('@/views/FileFragUpload/index.vue')
       },
       {
         path: 'image-crop',
@@ -24,6 +24,10 @@ const routes = [
       {
         path: 'waterfall-flow',
         component: () => import('@/views/WaterfallFlow/index.vue')
+      },
+      {
+        path: 'right-click-menu',
+        component: () => import('@/views/RightClickMenu/index.vue')
       }
     ]
   }

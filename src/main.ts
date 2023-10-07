@@ -13,6 +13,8 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
 
+// app.config.globalProperties.eventBus = eventBus
+
 app.use(pinia)
 app.use(router)
 app.use(directives)

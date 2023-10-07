@@ -27,6 +27,7 @@ declare module 'vue' {
     FileFragUpload: typeof import('./src/components/FileFragUpload/index.vue')['default']
     FileFullUpload: typeof import('./src/components/FileFullUpload/index.vue')['default']
     ImageCrop: typeof import('./src/components/ImageCrop/index.vue')['default']
+    RightClickMenu: typeof import('./src/components/RightClickMenu/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
