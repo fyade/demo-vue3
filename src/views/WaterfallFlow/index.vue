@@ -9,7 +9,7 @@ const state = reactive({
   heights: null,
   total: 0,
   pages: 0,
-  colUnm: 6,
+  colUnm: 4,
   queryParams: {
     remark: 'pbl',
     pageNum: 1,

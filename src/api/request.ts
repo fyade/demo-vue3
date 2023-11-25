@@ -1,6 +1,6 @@
 import axios from "axios"
-import { STORAGE_TOKEN_KEY } from "@/utils/base.js"
-import { response } from "../type/request.ts";
+import { STORAGE_TOKEN_KEY } from "@/utils/base.ts"
+import { response } from "@/type/request.ts";
 
 const env = import.meta.env
 const request = axios.create({

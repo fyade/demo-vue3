@@ -20,6 +20,10 @@ const handleSelect = (key: string, keyPath: string[]) => {
     <el-menu-item index="/image-crop">图片裁切上传</el-menu-item>
     <el-menu-item index="/waterfall-flow">瀑布流布局</el-menu-item>
     <el-menu-item index="/right-click-menu">自定义右键菜单</el-menu-item>
+    <el-sub-menu index="/three-js">
+      <template #title>three.js</template>
+      <el-menu-item index="/start">start</el-menu-item>
+    </el-sub-menu>
   </el-menu>
 </template>
 

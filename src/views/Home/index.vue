@@ -1,4 +1,13 @@
 <script setup lang="ts">
+import { onMounted } from "vue";
+
+const func = () => {
+  // 逻辑
+}
+
+onMounted(() => {
+  func()
+})
 </script>
 
 <template>
